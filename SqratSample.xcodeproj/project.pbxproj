@@ -9,6 +9,28 @@
 /* Begin PBXBuildFile section */
 		8D5C554219ED41170076883D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C554119ED41170076883D /* main.cpp */; };
 		8D5C554419ED41170076883D /* SqratSample.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D5C554319ED41170076883D /* SqratSample.1 */; };
+		8D5C563119ED416B0076883D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E219ED416B0076883D /* Makefile */; };
+		8D5C563219ED416B0076883D /* sqstdaux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E319ED416B0076883D /* sqstdaux.cpp */; };
+		8D5C563319ED416B0076883D /* sqstdblob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E419ED416B0076883D /* sqstdblob.cpp */; };
+		8D5C563419ED416B0076883D /* sqstdio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E619ED416B0076883D /* sqstdio.cpp */; };
+		8D5C563519ED416B0076883D /* sqstdmath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E819ED416B0076883D /* sqstdmath.cpp */; };
+		8D5C563619ED416B0076883D /* sqstdrex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E919ED416B0076883D /* sqstdrex.cpp */; };
+		8D5C563719ED416B0076883D /* sqstdstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55EA19ED416B0076883D /* sqstdstream.cpp */; };
+		8D5C563819ED416B0076883D /* sqstdstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55EC19ED416B0076883D /* sqstdstring.cpp */; };
+		8D5C563919ED416B0076883D /* sqstdsystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55ED19ED416B0076883D /* sqstdsystem.cpp */; };
+		8D5C563A19ED416B0076883D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55EF19ED416B0076883D /* Makefile */; };
+		8D5C563B19ED416B0076883D /* sqapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F019ED416B0076883D /* sqapi.cpp */; };
+		8D5C563C19ED416B0076883D /* sqbaselib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F219ED416B0076883D /* sqbaselib.cpp */; };
+		8D5C563D19ED416B0076883D /* sqclass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F319ED416B0076883D /* sqclass.cpp */; };
+		8D5C563E19ED416B0076883D /* sqcompiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F619ED416B0076883D /* sqcompiler.cpp */; };
+		8D5C563F19ED416B0076883D /* sqdebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F819ED416B0076883D /* sqdebug.cpp */; };
+		8D5C564019ED416B0076883D /* sqfuncstate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55FA19ED416B0076883D /* sqfuncstate.cpp */; };
+		8D5C564119ED416B0076883D /* sqlexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55FC19ED416B0076883D /* sqlexer.cpp */; };
+		8D5C564219ED416B0076883D /* sqmem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55FE19ED416B0076883D /* sqmem.cpp */; };
+		8D5C564319ED416B0076883D /* sqobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55FF19ED416B0076883D /* sqobject.cpp */; };
+		8D5C564419ED416B0076883D /* sqstate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C560319ED416B0076883D /* sqstate.cpp */; };
+		8D5C564519ED416B0076883D /* sqtable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C560619ED416B0076883D /* sqtable.cpp */; };
+		8D5C564619ED416B0076883D /* sqvm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C560B19ED416B0076883D /* sqvm.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +50,73 @@
 		8D5C553E19ED41170076883D /* SqratSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SqratSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5C554119ED41170076883D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8D5C554319ED41170076883D /* SqratSample.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SqratSample.1; sourceTree = "<group>"; };
+		8D5C557719ED416B0076883D /* sqmodule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqmodule.h; sourceTree = "<group>"; };
+		8D5C557919ED416B0076883D /* sqratAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratAllocator.h; sourceTree = "<group>"; };
+		8D5C557A19ED416B0076883D /* sqratArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratArray.h; sourceTree = "<group>"; };
+		8D5C557B19ED416B0076883D /* sqratClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratClass.h; sourceTree = "<group>"; };
+		8D5C557C19ED416B0076883D /* sqratClassType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratClassType.h; sourceTree = "<group>"; };
+		8D5C557D19ED416B0076883D /* sqratConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratConst.h; sourceTree = "<group>"; };
+		8D5C557E19ED416B0076883D /* sqratFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratFunction.h; sourceTree = "<group>"; };
+		8D5C557F19ED416B0076883D /* sqratGlobalMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratGlobalMethods.h; sourceTree = "<group>"; };
+		8D5C558019ED416B0076883D /* sqratMemberMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratMemberMethods.h; sourceTree = "<group>"; };
+		8D5C558119ED416B0076883D /* sqratObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratObject.h; sourceTree = "<group>"; };
+		8D5C558219ED416B0076883D /* sqratOverloadMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratOverloadMethods.h; sourceTree = "<group>"; };
+		8D5C558319ED416B0076883D /* sqratScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratScript.h; sourceTree = "<group>"; };
+		8D5C558419ED416B0076883D /* sqratTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratTable.h; sourceTree = "<group>"; };
+		8D5C558519ED416B0076883D /* sqratTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratTypes.h; sourceTree = "<group>"; };
+		8D5C558619ED416B0076883D /* sqratUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratUtil.h; sourceTree = "<group>"; };
+		8D5C558719ED416B0076883D /* sqratVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratVM.h; sourceTree = "<group>"; };
+		8D5C558819ED416B0076883D /* sqrat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqrat.h; sourceTree = "<group>"; };
+		8D5C558919ED416B0076883D /* sqratimport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratimport.h; sourceTree = "<group>"; };
+		8D5C55C219ED416B0076883D /* sqstdaux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdaux.h; sourceTree = "<group>"; };
+		8D5C55C319ED416B0076883D /* sqstdblob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdblob.h; sourceTree = "<group>"; };
+		8D5C55C419ED416B0076883D /* sqstdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdio.h; sourceTree = "<group>"; };
+		8D5C55C519ED416B0076883D /* sqstdmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdmath.h; sourceTree = "<group>"; };
+		8D5C55C619ED416B0076883D /* sqstdstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdstring.h; sourceTree = "<group>"; };
+		8D5C55C719ED416B0076883D /* sqstdsystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdsystem.h; sourceTree = "<group>"; };
+		8D5C55C819ED416B0076883D /* squirrel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = squirrel.h; sourceTree = "<group>"; };
+		8D5C55E219ED416B0076883D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8D5C55E319ED416B0076883D /* sqstdaux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdaux.cpp; sourceTree = "<group>"; };
+		8D5C55E419ED416B0076883D /* sqstdblob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdblob.cpp; sourceTree = "<group>"; };
+		8D5C55E519ED416B0076883D /* sqstdblobimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdblobimpl.h; sourceTree = "<group>"; };
+		8D5C55E619ED416B0076883D /* sqstdio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdio.cpp; sourceTree = "<group>"; };
+		8D5C55E719ED416B0076883D /* sqstdlib.dsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sqstdlib.dsp; sourceTree = "<group>"; };
+		8D5C55E819ED416B0076883D /* sqstdmath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdmath.cpp; sourceTree = "<group>"; };
+		8D5C55E919ED416B0076883D /* sqstdrex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdrex.cpp; sourceTree = "<group>"; };
+		8D5C55EA19ED416B0076883D /* sqstdstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdstream.cpp; sourceTree = "<group>"; };
+		8D5C55EB19ED416B0076883D /* sqstdstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstdstream.h; sourceTree = "<group>"; };
+		8D5C55EC19ED416B0076883D /* sqstdstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdstring.cpp; sourceTree = "<group>"; };
+		8D5C55ED19ED416B0076883D /* sqstdsystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstdsystem.cpp; sourceTree = "<group>"; };
+		8D5C55EF19ED416B0076883D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8D5C55F019ED416B0076883D /* sqapi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqapi.cpp; sourceTree = "<group>"; };
+		8D5C55F119ED416B0076883D /* sqarray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqarray.h; sourceTree = "<group>"; };
+		8D5C55F219ED416B0076883D /* sqbaselib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqbaselib.cpp; sourceTree = "<group>"; };
+		8D5C55F319ED416B0076883D /* sqclass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqclass.cpp; sourceTree = "<group>"; };
+		8D5C55F419ED416B0076883D /* sqclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqclass.h; sourceTree = "<group>"; };
+		8D5C55F519ED416B0076883D /* sqclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqclosure.h; sourceTree = "<group>"; };
+		8D5C55F619ED416B0076883D /* sqcompiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqcompiler.cpp; sourceTree = "<group>"; };
+		8D5C55F719ED416B0076883D /* sqcompiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqcompiler.h; sourceTree = "<group>"; };
+		8D5C55F819ED416B0076883D /* sqdebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqdebug.cpp; sourceTree = "<group>"; };
+		8D5C55F919ED416B0076883D /* sqfuncproto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqfuncproto.h; sourceTree = "<group>"; };
+		8D5C55FA19ED416B0076883D /* sqfuncstate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqfuncstate.cpp; sourceTree = "<group>"; };
+		8D5C55FB19ED416B0076883D /* sqfuncstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqfuncstate.h; sourceTree = "<group>"; };
+		8D5C55FC19ED416B0076883D /* sqlexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlexer.cpp; sourceTree = "<group>"; };
+		8D5C55FD19ED416B0076883D /* sqlexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlexer.h; sourceTree = "<group>"; };
+		8D5C55FE19ED416B0076883D /* sqmem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqmem.cpp; sourceTree = "<group>"; };
+		8D5C55FF19ED416B0076883D /* sqobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqobject.cpp; sourceTree = "<group>"; };
+		8D5C560019ED416B0076883D /* sqobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqobject.h; sourceTree = "<group>"; };
+		8D5C560119ED416B0076883D /* sqopcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqopcodes.h; sourceTree = "<group>"; };
+		8D5C560219ED416B0076883D /* sqpcheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqpcheader.h; sourceTree = "<group>"; };
+		8D5C560319ED416B0076883D /* sqstate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqstate.cpp; sourceTree = "<group>"; };
+		8D5C560419ED416B0076883D /* sqstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstate.h; sourceTree = "<group>"; };
+		8D5C560519ED416B0076883D /* sqstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqstring.h; sourceTree = "<group>"; };
+		8D5C560619ED416B0076883D /* sqtable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqtable.cpp; sourceTree = "<group>"; };
+		8D5C560719ED416B0076883D /* sqtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqtable.h; sourceTree = "<group>"; };
+		8D5C560819ED416B0076883D /* squirrel.dsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = squirrel.dsp; sourceTree = "<group>"; };
+		8D5C560919ED416B0076883D /* squserdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = squserdata.h; sourceTree = "<group>"; };
+		8D5C560A19ED416B0076883D /* squtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = squtils.h; sourceTree = "<group>"; };
+		8D5C560B19ED416B0076883D /* sqvm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqvm.cpp; sourceTree = "<group>"; };
+		8D5C560C19ED416B0076883D /* sqvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqvm.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +149,133 @@
 		8D5C554019ED41170076883D /* SqratSample */ = {
 			isa = PBXGroup;
 			children = (
+				8D5C554A19ED416B0076883D /* sqrat-0.9.1 */,
+				8D5C55B419ED416B0076883D /* SQUIRREL3 */,
 				8D5C554119ED41170076883D /* main.cpp */,
 				8D5C554319ED41170076883D /* SqratSample.1 */,
 			);
 			path = SqratSample;
+			sourceTree = "<group>";
+		};
+		8D5C554A19ED416B0076883D /* sqrat-0.9.1 */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C557619ED416B0076883D /* include */,
+			);
+			path = "sqrat-0.9.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		8D5C557619ED416B0076883D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C557719ED416B0076883D /* sqmodule.h */,
+				8D5C557819ED416B0076883D /* sqrat */,
+				8D5C558819ED416B0076883D /* sqrat.h */,
+				8D5C558919ED416B0076883D /* sqratimport.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8D5C557819ED416B0076883D /* sqrat */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C557919ED416B0076883D /* sqratAllocator.h */,
+				8D5C557A19ED416B0076883D /* sqratArray.h */,
+				8D5C557B19ED416B0076883D /* sqratClass.h */,
+				8D5C557C19ED416B0076883D /* sqratClassType.h */,
+				8D5C557D19ED416B0076883D /* sqratConst.h */,
+				8D5C557E19ED416B0076883D /* sqratFunction.h */,
+				8D5C557F19ED416B0076883D /* sqratGlobalMethods.h */,
+				8D5C558019ED416B0076883D /* sqratMemberMethods.h */,
+				8D5C558119ED416B0076883D /* sqratObject.h */,
+				8D5C558219ED416B0076883D /* sqratOverloadMethods.h */,
+				8D5C558319ED416B0076883D /* sqratScript.h */,
+				8D5C558419ED416B0076883D /* sqratTable.h */,
+				8D5C558519ED416B0076883D /* sqratTypes.h */,
+				8D5C558619ED416B0076883D /* sqratUtil.h */,
+				8D5C558719ED416B0076883D /* sqratVM.h */,
+			);
+			path = sqrat;
+			sourceTree = "<group>";
+		};
+		8D5C55B419ED416B0076883D /* SQUIRREL3 */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C55C119ED416B0076883D /* include */,
+				8D5C55E119ED416B0076883D /* sqstdlib */,
+				8D5C55EE19ED416B0076883D /* squirrel */,
+			);
+			path = SQUIRREL3;
+			sourceTree = SOURCE_ROOT;
+		};
+		8D5C55C119ED416B0076883D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C55C219ED416B0076883D /* sqstdaux.h */,
+				8D5C55C319ED416B0076883D /* sqstdblob.h */,
+				8D5C55C419ED416B0076883D /* sqstdio.h */,
+				8D5C55C519ED416B0076883D /* sqstdmath.h */,
+				8D5C55C619ED416B0076883D /* sqstdstring.h */,
+				8D5C55C719ED416B0076883D /* sqstdsystem.h */,
+				8D5C55C819ED416B0076883D /* squirrel.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8D5C55E119ED416B0076883D /* sqstdlib */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C55E219ED416B0076883D /* Makefile */,
+				8D5C55E319ED416B0076883D /* sqstdaux.cpp */,
+				8D5C55E419ED416B0076883D /* sqstdblob.cpp */,
+				8D5C55E519ED416B0076883D /* sqstdblobimpl.h */,
+				8D5C55E619ED416B0076883D /* sqstdio.cpp */,
+				8D5C55E719ED416B0076883D /* sqstdlib.dsp */,
+				8D5C55E819ED416B0076883D /* sqstdmath.cpp */,
+				8D5C55E919ED416B0076883D /* sqstdrex.cpp */,
+				8D5C55EA19ED416B0076883D /* sqstdstream.cpp */,
+				8D5C55EB19ED416B0076883D /* sqstdstream.h */,
+				8D5C55EC19ED416B0076883D /* sqstdstring.cpp */,
+				8D5C55ED19ED416B0076883D /* sqstdsystem.cpp */,
+			);
+			path = sqstdlib;
+			sourceTree = "<group>";
+		};
+		8D5C55EE19ED416B0076883D /* squirrel */ = {
+			isa = PBXGroup;
+			children = (
+				8D5C55EF19ED416B0076883D /* Makefile */,
+				8D5C55F019ED416B0076883D /* sqapi.cpp */,
+				8D5C55F119ED416B0076883D /* sqarray.h */,
+				8D5C55F219ED416B0076883D /* sqbaselib.cpp */,
+				8D5C55F319ED416B0076883D /* sqclass.cpp */,
+				8D5C55F419ED416B0076883D /* sqclass.h */,
+				8D5C55F519ED416B0076883D /* sqclosure.h */,
+				8D5C55F619ED416B0076883D /* sqcompiler.cpp */,
+				8D5C55F719ED416B0076883D /* sqcompiler.h */,
+				8D5C55F819ED416B0076883D /* sqdebug.cpp */,
+				8D5C55F919ED416B0076883D /* sqfuncproto.h */,
+				8D5C55FA19ED416B0076883D /* sqfuncstate.cpp */,
+				8D5C55FB19ED416B0076883D /* sqfuncstate.h */,
+				8D5C55FC19ED416B0076883D /* sqlexer.cpp */,
+				8D5C55FD19ED416B0076883D /* sqlexer.h */,
+				8D5C55FE19ED416B0076883D /* sqmem.cpp */,
+				8D5C55FF19ED416B0076883D /* sqobject.cpp */,
+				8D5C560019ED416B0076883D /* sqobject.h */,
+				8D5C560119ED416B0076883D /* sqopcodes.h */,
+				8D5C560219ED416B0076883D /* sqpcheader.h */,
+				8D5C560319ED416B0076883D /* sqstate.cpp */,
+				8D5C560419ED416B0076883D /* sqstate.h */,
+				8D5C560519ED416B0076883D /* sqstring.h */,
+				8D5C560619ED416B0076883D /* sqtable.cpp */,
+				8D5C560719ED416B0076883D /* sqtable.h */,
+				8D5C560819ED416B0076883D /* squirrel.dsp */,
+				8D5C560919ED416B0076883D /* squserdata.h */,
+				8D5C560A19ED416B0076883D /* squtils.h */,
+				8D5C560B19ED416B0076883D /* sqvm.cpp */,
+				8D5C560C19ED416B0076883D /* sqvm.h */,
+			);
+			path = squirrel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +329,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5C563A19ED416B0076883D /* Makefile in Sources */,
+				8D5C563719ED416B0076883D /* sqstdstream.cpp in Sources */,
+				8D5C563819ED416B0076883D /* sqstdstring.cpp in Sources */,
+				8D5C563C19ED416B0076883D /* sqbaselib.cpp in Sources */,
+				8D5C563219ED416B0076883D /* sqstdaux.cpp in Sources */,
+				8D5C563B19ED416B0076883D /* sqapi.cpp in Sources */,
+				8D5C563319ED416B0076883D /* sqstdblob.cpp in Sources */,
+				8D5C563119ED416B0076883D /* Makefile in Sources */,
 				8D5C554219ED41170076883D /* main.cpp in Sources */,
+				8D5C564619ED416B0076883D /* sqvm.cpp in Sources */,
+				8D5C563919ED416B0076883D /* sqstdsystem.cpp in Sources */,
+				8D5C563519ED416B0076883D /* sqstdmath.cpp in Sources */,
+				8D5C564219ED416B0076883D /* sqmem.cpp in Sources */,
+				8D5C563E19ED416B0076883D /* sqcompiler.cpp in Sources */,
+				8D5C563D19ED416B0076883D /* sqclass.cpp in Sources */,
+				8D5C563619ED416B0076883D /* sqstdrex.cpp in Sources */,
+				8D5C563F19ED416B0076883D /* sqdebug.cpp in Sources */,
+				8D5C564519ED416B0076883D /* sqtable.cpp in Sources */,
+				8D5C564119ED416B0076883D /* sqlexer.cpp in Sources */,
+				8D5C564319ED416B0076883D /* sqobject.cpp in Sources */,
+				8D5C564419ED416B0076883D /* sqstate.cpp in Sources */,
+				8D5C563419ED416B0076883D /* sqstdio.cpp in Sources */,
+				8D5C564019ED416B0076883D /* sqfuncstate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
