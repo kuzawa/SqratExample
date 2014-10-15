@@ -143,6 +143,7 @@ struct ClassType {
             return;
         }
 #endif
+		assert(hasClassTypeData(vm));
         sq_pushobject(vm, ClassObject(vm));
         sq_createinstance(vm, -1);
         sq_remove(vm, -2);
