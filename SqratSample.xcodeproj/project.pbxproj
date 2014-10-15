@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D5C554219ED41170076883D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C554119ED41170076883D /* main.cpp */; };
-		8D5C554419ED41170076883D /* SqratSample.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D5C554319ED41170076883D /* SqratSample.1 */; };
-		8D5C563119ED416B0076883D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E219ED416B0076883D /* Makefile */; };
 		8D5C563219ED416B0076883D /* sqstdaux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E319ED416B0076883D /* sqstdaux.cpp */; };
 		8D5C563319ED416B0076883D /* sqstdblob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E419ED416B0076883D /* sqstdblob.cpp */; };
 		8D5C563419ED416B0076883D /* sqstdio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55E619ED416B0076883D /* sqstdio.cpp */; };
@@ -18,7 +16,6 @@
 		8D5C563719ED416B0076883D /* sqstdstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55EA19ED416B0076883D /* sqstdstream.cpp */; };
 		8D5C563819ED416B0076883D /* sqstdstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55EC19ED416B0076883D /* sqstdstring.cpp */; };
 		8D5C563919ED416B0076883D /* sqstdsystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55ED19ED416B0076883D /* sqstdsystem.cpp */; };
-		8D5C563A19ED416B0076883D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55EF19ED416B0076883D /* Makefile */; };
 		8D5C563B19ED416B0076883D /* sqapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F019ED416B0076883D /* sqapi.cpp */; };
 		8D5C563C19ED416B0076883D /* sqbaselib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F219ED416B0076883D /* sqbaselib.cpp */; };
 		8D5C563D19ED416B0076883D /* sqclass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C55F319ED416B0076883D /* sqclass.cpp */; };
@@ -40,7 +37,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				8D5C554419ED41170076883D /* SqratSample.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -49,7 +45,6 @@
 /* Begin PBXFileReference section */
 		8D5C553E19ED41170076883D /* SqratSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SqratSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5C554119ED41170076883D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8D5C554319ED41170076883D /* SqratSample.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SqratSample.1; sourceTree = "<group>"; };
 		8D5C557719ED416B0076883D /* sqmodule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqmodule.h; sourceTree = "<group>"; };
 		8D5C557919ED416B0076883D /* sqratAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratAllocator.h; sourceTree = "<group>"; };
 		8D5C557A19ED416B0076883D /* sqratArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratArray.h; sourceTree = "<group>"; };
@@ -152,7 +147,6 @@
 				8D5C554A19ED416B0076883D /* sqrat-0.9.1 */,
 				8D5C55B419ED416B0076883D /* SQUIRREL3 */,
 				8D5C554119ED41170076883D /* main.cpp */,
-				8D5C554319ED41170076883D /* SqratSample.1 */,
 			);
 			path = SqratSample;
 			sourceTree = "<group>";
@@ -329,14 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5C563A19ED416B0076883D /* Makefile in Sources */,
 				8D5C563719ED416B0076883D /* sqstdstream.cpp in Sources */,
 				8D5C563819ED416B0076883D /* sqstdstring.cpp in Sources */,
 				8D5C563C19ED416B0076883D /* sqbaselib.cpp in Sources */,
 				8D5C563219ED416B0076883D /* sqstdaux.cpp in Sources */,
 				8D5C563B19ED416B0076883D /* sqapi.cpp in Sources */,
 				8D5C563319ED416B0076883D /* sqstdblob.cpp in Sources */,
-				8D5C563119ED416B0076883D /* Makefile in Sources */,
 				8D5C554219ED41170076883D /* main.cpp in Sources */,
 				8D5C564619ED416B0076883D /* sqvm.cpp in Sources */,
 				8D5C563919ED416B0076883D /* sqstdsystem.cpp in Sources */,
@@ -461,6 +453,7 @@
 				8D5C554919ED41170076883D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
