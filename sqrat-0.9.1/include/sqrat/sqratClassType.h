@@ -74,10 +74,15 @@ struct ClassType {
         return s_classTypeDataMap;
     }
 
-    static inline std::map<C*, HSQOBJECT>& s_objectTable() {
-        static std::map<C*, HSQOBJECT> s_objectTable;
-        return s_objectTable;
+    static inline std::map<C*, HSQOBJECT>& s_objectTable(HSQUIRRELVM vm) {
+        static std::map<HSQUIRRELVM, std::map<C*, HSQOBJECT>> s_objectTable;
+        return s_objectTable[vm];
     }
+
+	static inline std::map<C**, std::pair<C*, HSQUIRRELVM>>& s_referenceTableEx() {
+		static std::map<C**, std::pair<C*, HSQUIRRELVM>> s_referenceTableEx;
+		return s_referenceTableEx;
+	}
 
     static inline ClassTypeDataBase*& getClassTypeData(HSQUIRRELVM vm) {
         //TODO: use mutex to lock s_classTypeDataMap in multithreaded environment
@@ -124,18 +129,41 @@ struct ClassType {
         return getClassTypeData(vm)->baseClass;
     }
 
-    static inline SQInteger RemoveFromObjectTable(SQUserPointer ptr, SQInteger) {
-        typename std::map<C*, HSQOBJECT>::iterator it = s_objectTable().find(reinterpret_cast<C*>(ptr));
-        assert(it != s_objectTable().end());
-        s_objectTable().erase(it);
+    static inline SQInteger RemoveFromObjectTable(SQUserPointer pptr, SQInteger) {
+
+		HSQUIRRELVM vm = s_referenceTableEx()[static_cast<C**>(pptr)].second;
+		C* ptr = *static_cast<C**>(pptr);
+
+		typename std::map<C*, HSQOBJECT>::iterator it = s_objectTable(vm).find(reinterpret_cast<C*>(ptr));
+		assert(it != s_objectTable(vm).end());
+		s_objectTable(vm).erase(it);
+
+		{
+			typename std::map<C**, std::pair<C*, HSQUIRRELVM>>::iterator it = s_referenceTableEx().find(static_cast<C**>(pptr));
+			s_referenceTableEx().erase(it);
+			delete static_cast<C**>(pptr);
+		}
+
         return 0;
     }
 
     static void PushInstance(HSQUIRRELVM vm, C* ptr) {
-        typename std::map<C*, HSQOBJECT>::iterator it = s_objectTable().find(ptr);
-        if (it != s_objectTable().end()) {
-          sq_pushobject(vm, it->second);
-          return;
+
+		C** pptr = nullptr;
+		std::map<C**, std::pair<C*, HSQUIRRELVM>>& tab = s_referenceTableEx();
+		for ( auto it = tab.begin(); it != tab.end(); ++it ) {
+			if ( it->second.first == ptr && it->second.second == vm ) {
+				pptr = it->first;
+				break;
+			}
+		}
+
+		if ( pptr ) {
+			typename std::map<C*, HSQOBJECT>::iterator it = s_objectTable(vm).find(ptr);
+			if (it != s_objectTable(vm).end()) {
+				sq_pushobject(vm, it->second);
+				return;
+			}
         }
 #if !defined (SCRAT_NO_ERROR_CHECKING)
         if (!ptr) {
@@ -143,13 +171,17 @@ struct ClassType {
             return;
         }
 #endif
+		pptr = new C*;
+		*pptr = ptr;
+		s_referenceTableEx()[pptr] = std::make_pair(ptr, vm);
+
 		assert(hasClassTypeData(vm));
         sq_pushobject(vm, ClassObject(vm));
         sq_createinstance(vm, -1);
         sq_remove(vm, -2);
-        sq_setinstanceup(vm, -1, ptr);
+        sq_setinstanceup(vm, -1, pptr);
         sq_setreleasehook(vm, -1, &RemoveFromObjectTable);
-        sq_getstackobj(vm, -1, &s_objectTable()[ptr]);
+        sq_getstackobj(vm, -1, &s_objectTable(vm)[ptr]);
     }
 
     static void PushInstanceCopy(HSQUIRRELVM vm, const C& value) {
@@ -194,10 +226,11 @@ struct ClassType {
             }
             sq_settop(vm, top);
         }
+
         if (classType != actualType) {
-            return static_cast<C*>(actualType->Cast(ptr, classType));
+            return static_cast<C*>(actualType->Cast(*static_cast<C**>(ptr), classType));
         }
-        return static_cast<C*>(ptr);
+        return static_cast<C*>(*static_cast<C**>(ptr));
     }
 };
 
