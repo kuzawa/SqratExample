@@ -13,42 +13,27 @@
 
 using namespace Sqrat;
 
-static void print(HSQUIRRELVM vm, const SQChar* str, ...)
-{
-	SQChar buff[512];
-	va_list arglist;
-	va_start(arglist, str);
-	vsnprintf(buff, sizeof(buff), str, arglist);
-	va_end(arglist);
-	printf("%s", buff);
-}
-
 class Human
 {
 public:
-	void hello() { std::cout << "Hello.\n"; }
+	void hello() {
+		std::cout << "Hello.\n" << std::flush;
+	}
 };
 
-void test1(Human* human)
+void test1(Human* human, const char* script)
 {
-	const char* script =
-		"function greeting(human){	"
-		"	human.hello();			"
-		"}							";
-
 	SqratVM vm1;
 	SqratVM vm2;
 
-	Class<Human> humanClass1(vm1.GetVM());
+	Class<Human, NoConstructor<Human>> humanClass1(vm1.GetVM());
 	humanClass1.Func("hello", &Human::hello);
 
-	Class<Human> humanClass2(vm2.GetVM());
+	Class<Human, NoConstructor<Human>> humanClass2(vm2.GetVM());
 	humanClass2.Func("hello", &Human::hello);
 
-//	vm1.GetRootTable().Bind("Human", humanClass1);
-//	vm2.GetRootTable().Bind("Human", humanClass2);
-	RootTable(vm1.GetVM()).Bind("Human", humanClass1);
-	RootTable(vm2.GetVM()).Bind("Human", humanClass2);
+	vm1.GetRootTable().Bind("Human", humanClass1);
+	vm2.GetRootTable().Bind("Human", humanClass2);
 
 	vm1.DoString(script);
 	Function f1 = vm1.GetRootTable().GetFunction("greeting");
@@ -58,52 +43,71 @@ void test1(Human* human)
 	Function f2 = vm2.GetRootTable().GetFunction("greeting");
 	assert(!f2.IsNull());
 
-	// this is OK.
-	f1(&human);
-	f2(&human);
+	f1(human);
+	if ( Error::Instance().Occurred(vm1.GetVM()) ) {
+		std::cout << Error::Instance().Message(vm1.GetVM()) << std::endl << std::flush;
+		Error::Instance().Clear(vm1.GetVM());
+	}
+
+	f2(human); // <-- faild here if you are trun on line 96.
+	if ( Error::Instance().Occurred(vm2.GetVM()) ) {
+		std::cout << Error::Instance().Message(vm2.GetVM()) << std::endl << std::flush;
+		Error::Instance().Clear(vm2.GetVM());
+	}
 }
 
 void test2(Human* human)
 {
-	const char* script =
-	"function greeting(human){	"
-	"	human.hello();			"
-	"	suspend();				"	// just add 1 line.
-	"}							";
+	const char* script2 =
+	"function f(h) {				"	// thread inherit roottable from parent vm.
+#warning Please on/off this line.
+#if 0
+	"	h.hello();					"
+#else
+	"	print(\"print hello\");		"	// <- I cant't access Human instance.
+#endif
+	"}								"
+	"g_human.hello();				"	// <- this is ok.
+	"local t = newthread(f);		"
+	"t.call(g_human);				"	// <- but fail hello in thread(on friend vm)
+	"								";
 
-	SqratVM vm1;
-	SqratVM vm2;
+	SqratVM vm;
 
-	Class<Human> humanClass1(vm1.GetVM());
-	humanClass1.Func("hello", &Human::hello);
+	Class<Human, NoConstructor<Human>> humanClass(vm.GetVM());
+	humanClass.Func("hello", &Human::hello);
+	vm.GetRootTable().Bind("Human", humanClass);
+	vm.GetRootTable().SetInstance("g_human", human);
 
-	Class<Human> humanClass2(vm2.GetVM());
-	humanClass2.Func("hello", &Human::hello);
-
-	vm1.GetRootTable().Bind("Human", humanClass1);
-	vm2.GetRootTable().Bind("Human", humanClass2);
-
-	vm1.DoString(script);
-	Function f1 = vm1.GetRootTable().GetFunction("greeting");
-
-	vm2.DoString(script);
-	Function f2 = vm2.GetRootTable().GetFunction("greeting");
-
-	// this is OK.
-	f1(&human);
-	f2(&human);
-
-	sq_resume(vm1.GetVM(), SQFalse, SQTrue);
-	sq_resume(vm2.GetVM(), SQFalse, SQTrue);
+	if ( vm.DoString(script2) != SqratVM::SQRAT_NO_ERROR ) {
+		std::cout << vm.GetLastErrorMsg() << std::endl << std::flush;
+	}
+	std::cout << std::flush;
 }
 
 int main(int argc, const char * argv[])
 {
 	Human human;
 
-	test1(&human);	// this is OK.
+	const char* script1 =
+	"function greeting(human){	"
+	"	human.hello();			"
+#warning Please on/off this line.
+#if 1
+	"	suspend();				"
+#endif
+	"}							";
 
-	test2(&human);	// this is fail.
+	std::cout << "======= test1 =======\n" << std::flush;
+	// I can't use one C++ class instance simultaneously.
+	test1(&human, script1);
+	std::cout << "======= test1 end =======\n" << std::flush;
+
+	// AND
+	std::cout << "======= test2 =======\n" << std::flush;
+	// I can't use C++ class instance in newthread'ed VM.
+	test2(&human);
+	std::cout << "======= test2 end=======\n" << std::flush;
 
     return 0;
 }
